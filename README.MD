@@ -1,4 +1,4 @@
-# Rust Concept
+# Rust
 
 Rust is a statically and strongly typed compiled language known for its exceptional speed, reliability, and high-level features combined with low-level control. This README aims to provide a brief overview of Rust and its core concepts.
 
