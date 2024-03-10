@@ -15,4 +15,9 @@ pub fn string(){
 
    let name_string = String::from("Ashutosh");
    println!("length is {}",name_string.len());
+
+   let mut text = "I write code".to_string();
+   println!("{}", text);
+   text = text.replace("code", "rust");
+   println!("{}", text);
 }
