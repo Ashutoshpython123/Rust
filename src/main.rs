@@ -9,6 +9,7 @@ mod enum_;
 mod option_result;
 mod collection;
 mod traits;
+mod box_trait;
 
 fn main() {
     // datatype::data_type();
@@ -21,5 +22,6 @@ fn main() {
     // enum_::enum_();
     // option_result::option_result();
     // collection::collection();
-    traits::traits();
+    // traits::traits();
+    box_trait::box_();
 }
