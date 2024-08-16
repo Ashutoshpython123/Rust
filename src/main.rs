@@ -7,6 +7,7 @@ mod array;
 mod function;
 mod enum_;
 mod option_result;
+mod collection;
 
 fn main() {
     // datatype::data_type();
@@ -17,5 +18,6 @@ fn main() {
     // array::array();
     // function::main_fn();
     // enum_::enum_();
-    option_result::option_result();
+    // option_result::option_result();
+    collection::collection();
 }
