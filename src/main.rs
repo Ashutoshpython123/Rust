@@ -8,6 +8,7 @@ mod function;
 mod enum_;
 mod option_result;
 mod collection;
+mod traits;
 
 fn main() {
     // datatype::data_type();
@@ -19,5 +20,6 @@ fn main() {
     // function::main_fn();
     // enum_::enum_();
     // option_result::option_result();
-    collection::collection();
+    // collection::collection();
+    traits::traits();
 }
