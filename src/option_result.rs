@@ -27,6 +27,16 @@ pub fn option_result() {
         Err(err_msg) => println!("Error: {}",err_msg),
         Ok(value) => println!("Division of {} by {} is {}", a, b, value),
     }
+
+
+    //Combined of Option and Result
+    let base = get_from_arr("base".to_string());
+    let height = get_from_arr("height".to_string());
+    let area = cal_triangle_area(base, height);
+    match area {
+        Ok(value) => println!("area of triangle: {}", value),
+        Err(err) => println!("Error : {}", err),
+    }
 }
 
 fn cal_square_root(number: f64) -> Option<f64> {
@@ -42,5 +52,30 @@ fn divide(a:f64, b:f64) -> Result<f64, String> {
         Err("Division by zero is not allowed".to_string())
     } else {
         Ok(a/b)
+    }
+}
+
+fn get_from_arr(key: String) -> Option<f64> {
+    let db = vec![("base", Some(10.0)), ("height", Some(6.0))];
+    for (k, v) in db {
+        if k == key {
+            return v;
+        }
+    }
+    None
+}
+
+
+fn cal_triangle_area(base : Option<f64>, height : Option<f64>) -> Result<f64, String> {
+    match (base, height) {
+        (Some(b), Some(h)) => {
+            if b<=0.0 || h <=0.0 {
+                Err("both base and height must be positive number".to_string())
+            } else {
+                Ok(0.5*b*h)
+            }
+        },
+        (None, _) => Err("Some thing wrong with height".to_string()),
+        (_, None) => Err("Some thing wrong with base".to_string()),
     }
 }
